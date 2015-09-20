@@ -57,12 +57,15 @@
 /**
  *	CarbonTabSwipeDelegate
  */
-@property (nonatomic, weak) id<CarbonTabSwipeDelegate> delegate;
+@property (nonatomic, assign) id<CarbonTabSwipeDelegate> delegate;
 
 /**
  *	Get the index value of the currently selected tab. Setting this value will change the previously selected tab to the one which matches the new index value.
  */
 @property (nonatomic, assign) NSUInteger currentTabIndex;
+
+@property (nonatomic, retain) UIPageViewController *pageController;
+@property (nonatomic, retain) UISegmentedControl *segmentController;
 
 /**
  *	This method will create TabSwipeNavigation
